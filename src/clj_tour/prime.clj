@@ -1,4 +1,5 @@
-(ns clj-tour.prime)
+(ns clj-tour.prime
+  (:require [clojure.core.memoize :as memo]))
 
 (defn prime?
   [n]
@@ -11,7 +12,7 @@
               (empty?))))
 
 (time (prime? 1125899906842679))
-(require '[clojure.core.memoize :as memo])
+;; (require '[clojure.core.memoize :as memo])
 (def m-prime? (memo/memo prime?))
 (time (m-prime? 1125899906842679))
 (time (m-prime? 1125899906842679))
