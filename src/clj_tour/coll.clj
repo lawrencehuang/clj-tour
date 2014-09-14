@@ -1,5 +1,5 @@
 (ns clj-tour.coll
-  (:require [clojure.pprint]
+  (:require [clojure.pprint :as pp]
             [clojure.string :as str])
   (:use [clojure.repl]))
 
